@@ -1,0 +1,27 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# --- Django ---
+db.sqlite3
+media/
+
+# --- JavaScript / React ---
+node_modules/
+build/
+dist/
+.DS_Store
+
+# MISCELANIOUS Ignores:--
+# Ignore common video file formats
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.ts
+
+# Ignore Windows desktop configuration files
+desktop.ini
