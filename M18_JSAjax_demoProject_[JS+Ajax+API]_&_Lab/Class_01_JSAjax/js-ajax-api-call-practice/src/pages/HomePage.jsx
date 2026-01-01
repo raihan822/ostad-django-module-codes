@@ -25,10 +25,10 @@ function TabularTechnologyInformation(){
         {sl:2, name: "axios", description: "An Ajax tech"},
         {sl:3, name: "milligram", description: "CSS mini framework"},
     ]
-    const table_key_names = Object.keys(technology_used[0]);    //Object.keys(your_object) to get the obj key names.
+    const table_key_names = Object.keys(technology_used[0]);    //Object.keys(your_object[0]) to get the obj key names.
 
     return (
-        <table style={{ border: '2px solid black' }}>
+        <table border='1'>
             <caption><strong>TECHNOLOGIES USED</strong></caption>
             <thead>
                 <tr>
