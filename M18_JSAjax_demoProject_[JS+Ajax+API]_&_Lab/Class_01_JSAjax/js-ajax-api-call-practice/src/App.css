@@ -1,0 +1,5 @@
+/* Centers text horizontally and vertically in all table cells */
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
