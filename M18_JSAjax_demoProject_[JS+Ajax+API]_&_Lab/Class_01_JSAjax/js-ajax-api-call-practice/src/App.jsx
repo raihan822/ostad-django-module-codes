@@ -2,7 +2,7 @@
 * in React any css written in or out of a folder into a .css file, the css styling becomes one unified css in React.
 so even if u write table css in tablestyle.css file, you will see the effect also in the app.jsx tables.
 
-* To scopify/restrict it down to only into TableComponent.jsx DO THIS:
+* To scope/restrictify it down to only into TableComponent.jsx DO THIS:
 * =====================================
 Use CSS Modules (Recommended):
 Rename your file to TableComponent.module.css. This tells React to "scope" the classes so they only apply to the component where they are imported.
