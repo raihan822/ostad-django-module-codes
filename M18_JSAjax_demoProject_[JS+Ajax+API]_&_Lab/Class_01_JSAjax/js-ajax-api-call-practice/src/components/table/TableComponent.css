@@ -18,3 +18,7 @@ th, td {
 table, th, td {
     border: 1px solid black; /* width, style, color */
 }
+
+.no-border-element {
+    border: none;
+}

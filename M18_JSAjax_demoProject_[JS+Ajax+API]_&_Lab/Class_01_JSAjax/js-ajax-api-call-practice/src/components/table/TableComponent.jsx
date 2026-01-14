@@ -1,11 +1,17 @@
-// This Custom Component makes a Table out of a given Object Array [{},{},{}]
+// This Custom Component makes a Table out of a given Object Array [{},{},{}]. Nothing else is required!
 import "./TableComponent.css"
 export default function TableComponent({
                                          caption="",
-                                         dataObjArray,
+                                         dataObjArray = [],   //[This is Main API Data] data api table e majhe majhe na o thakte pare
+                                         excludedKeys = [],   //not important for elsewhere. just optional for what to show.
                                          footNote="" }){
-    const NUMBER_OF_COLUMNS = dataObjArray.length;
-    const KEY_NAMES = Object.keys(dataObjArray[0]); //list of obj, so took the fist obj only to see its key names.
+    //Default case: if no data on the array:
+    if (dataObjArray.length === 0) return <p>No data available</p>;
+
+    //Otherwise: Continue:
+    const KEY_NAMES = Object.keys(dataObjArray[0]); //list of obj, so took the fist obj only to see its key names.  //returns a list of strings
+    const ALLOWED_KEY_NAMES = KEY_NAMES.filter(i => !excludedKeys.includes(i))
+    const NUMBER_OF_COLUMNS = ALLOWED_KEY_NAMES.length;
     const SL = KEY_NAMES[0];    //first key should be sent as serial number of the data
 
     /*  Note:-
@@ -17,7 +23,7 @@ export default function TableComponent({
             {caption !== "" && <caption><strong>{caption.toUpperCase()}</strong></caption>}
             <thead>
                 <tr>
-                    {KEY_NAMES.map(
+                    {ALLOWED_KEY_NAMES.map(
                         (key_name, index) =>
                             <th key={index} scope="col">{key_name.charAt(0).toUpperCase() + key_name.slice(1)}</th>
                     )}
@@ -25,9 +31,9 @@ export default function TableComponent({
             </thead>
             <tbody>
                 {dataObjArray.map(
-                    data =>
-                        <tr key={data[SL]}>
-                            {KEY_NAMES.map( (key_name, idx) =>
+                    (data, indexNo) =>
+                        <tr key={data[SL] || indexNo}>
+                            {ALLOWED_KEY_NAMES.map( (key_name, idx) =>
                                     <td key={idx} scope="col">{data[key_name]}</td>
                             )}
                         </tr>

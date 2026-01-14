@@ -14,7 +14,12 @@ function BriefIntroduction() {
             <h2>Info:</h2>
             <p>
                 Here I have practiced API CRUD Operations with React and <strong><i>Rabbil bhai's</i></strong> Postman Practice Api
-                (<a href="https://documenter.getpostman.com/view/39406886/2sAY4vh3UX" target="_blank" rel="noopener noreferrer">Link</a>)
+                (<a href="https://documenter.getpostman.com/view/39406886/2sAY4vh3UX"
+                    target="_blank"
+                    rel="noopener noreferrer">Link</a>) or,
+                (<a href={'src/assets/1.1. API-Doc (CRUD Practice API Documentation PDF) (Sobuj).pdf'}
+                    target="_blank"
+                    rel="noopener noreferrer">PDF</a>)
             </p>
         </div>
     );

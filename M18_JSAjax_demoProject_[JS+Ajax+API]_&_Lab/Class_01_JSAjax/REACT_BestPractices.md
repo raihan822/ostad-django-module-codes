@@ -54,6 +54,7 @@ These conventions generally follow standard JavaScript/TypeScript practices.
 | **Hook Name** | **camelCase** | `useState`, `useEffect` | Must start with the prefix `use`. *Example:* `useFetchData`, `useAuth` |
 | **Variable** | **camelCase** | `userList`, `isLoading`, `firstName` | Describe the data it holds. |
 | **Constant** | **SCREAMING\_SNAKE\_CASE** | `API_KEY`, `MAX_USERS`, `DEFAULT_THEME` | For immutable global values. |
+| **Constant variable names of useState** | **camelCase** | `products`, `loading`, `error` | For useState's var names. |
 | **Boolean Variable** | **Prefix with `is` or `has`** | `isLoggedIn`, `hasError`, `canSubmit` | Improves readability. |
 
 
