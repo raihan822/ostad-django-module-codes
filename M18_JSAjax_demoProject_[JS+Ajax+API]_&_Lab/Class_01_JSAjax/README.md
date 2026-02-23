@@ -122,11 +122,3 @@ If not installed → [https://nodejs.org](https://nodejs.org) (LTS version)
 | Legacy tutorials | CRA            |
 
 ---
-
-If you want, tell me:
-
-* **Your OS** (Windows / macOS / Linux)
-* **JavaScript or TypeScript**
-* Whether you want **Tailwind, routing, or backend**
-
-I can tailor the setup exactly for you.

@@ -1,11 +1,12 @@
 - React always executes `Return ()=>{}` arrow func or `onClick ()=>{}` by itself when required
-* WHY REACT CALLS this portion by itself and I dont have to call the function manullay?
+* WHY REACT CALLS this portion by itself and I dont have to call the function manually?
         react renders only the return portion itself always! So, react k diye future e koraite chaile ba onClick js e kichu korte chaile 
         ALWAYS USE ARRO FUNCTION ()=>{..}
 
 
 
 # Question:
+```
 export default function ProductList() { 
     const [products, setProducts] = useState([]); 
     const [loading, setLoading] = useState(true); 
@@ -15,12 +16,13 @@ export default function ProductList() {
         () => {}, 
         []
     );
-//....
+    //..........
 }
+```
 What is the best practice, will I keep the const variable names of the useState var products and etc lowercase? and will it be [] or what type is best practice when api call? And how do we assign value into these useState variables with set in different types [],{},"" etc etc?
 
 
-Answer:
+# Answer:
 Good questions — these are **core React best-practices**, and you’re already very close to doing things the *right way*. I’ll answer point-by-point with **clear rules + reasoning**, not vague advice.
 
 ---
