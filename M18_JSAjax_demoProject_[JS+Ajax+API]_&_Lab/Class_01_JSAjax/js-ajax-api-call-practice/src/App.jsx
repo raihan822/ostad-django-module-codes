@@ -7,7 +7,7 @@
 * in React any css written in or out of a folder into a .css file, the css styling becomes one unified css in React.
 so even if u write table css in tablestyle.css file, you will see the effect also in the app.jsx tables.
 
-* To scope/restrictify it down to only into TableComponent.jsx DO THIS:
+* To scope/restrict it down to only into TableComponent.jsx DO THIS:
 * =====================================
 Use CSS Modules (Recommended):
 Rename your file to TableComponent.module.css. This tells React to "scope" the classes so they only apply to the component where they are imported.
@@ -29,7 +29,7 @@ Wrap your table in a unique container ID or class and nest your CSS rules inside
 }
 * */
 
-/*we use useEffect to render external effects/data. react by default can render internal effects/data of its own jsx files and etc. but from API receiving data, we need external effect handling feature to work in here.
+/*We use useEffect to render external effects/data. react by default can render internal effects/data of its own jsx files and, etc. but from API receiving data, we need external effect handling feature to work in here.
 so in react we use useEffect() with a func and array.
 
 in modern era 2026 and on, industries uses TanStack in place of useEffect. which is more powerful and far better querying!
