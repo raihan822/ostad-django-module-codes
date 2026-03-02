@@ -2,7 +2,7 @@
 import "./TableComponent.css"
 export default function TableComponent({
                                          caption="",
-                                         dataObjArray = [],   //[This is Main API Data] data api table e majhe majhe na o thakte pare
+                                         dataObjArray = [],   //[This is the --MAIN-- Data from API] data api table e majhe majhe na o thakte pare
                                          excludedKeys = [],   //not important for elsewhere. just optional for what to show.
                                          footNote="" }){
     //Default case: if no data on the array:

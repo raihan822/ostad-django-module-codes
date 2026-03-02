@@ -19,7 +19,7 @@ Columns:[] =[
  * @param {string} footNote - Footnote for the Table (Optional)
  */
 export default function TableComponentPro({ caption="",
-                                            dataObjArray = [],  //[This is Main API Data] data api table e majhe majhe na o thakte pare
+                                            dataObjArray = [],  //[This is --MAIN-- API Data received from API response] data api table e majhe majhe na o thakte pare
                                             columns = [],       //[This is the Column structure] allowed column names, their keys with api, and any render html if any
                                             footNote="" }){
     /*  Note:-
