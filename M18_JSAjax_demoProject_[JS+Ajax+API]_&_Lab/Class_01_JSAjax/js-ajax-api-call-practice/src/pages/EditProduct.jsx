@@ -1,5 +1,5 @@
 /**
- Why is passing ProductID on the URL better is than passing/exporting from a component as a state?
+ Why is passing ProductID on the URL is better than passing/exporting from a component as a state?
  Deep Linking: A user can refresh the Edit page, and it won't break. If you just passed the data via state, refreshing would lose that data.
  Bookmarking: You can bookmark a specific edit page.
  Reliability: The Edit component can fetch the "freshest" data from the API using the ID from the URL
@@ -25,7 +25,7 @@ import axios from "axios";
 import LoaderComponent from "../components/loader/LoaderComponent.jsx";
 
 export default function EditProduct(){
-    const {id} = useParams(); //this "id" has to be on the URL and match exactly!!
+    const {id} = useParams(); //this "id" has to be on the URL and match to-the-point exactly!!
     const navigate = useNavigate();
 
 

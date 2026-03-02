@@ -13,27 +13,27 @@ export default function CreateProduct(){
     // To prevent double-submissions and show UI feedback
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Setting Derived variable (means, auto calculated) [below is not the best practice]:
+    // Setting Derived variable "TotalPrice" (means, auto calculated) with useEffect() [below is not the best practice]:
     useEffect(()=>{
         setFormData( (prev) => ({...prev, TotalPrice : (prev.UnitPrice * prev.Qty)}) //orthat, ..prev ja ase tai, just TotalPrice ta change hobe on change of formData.UnitPrice, formData.Qty
-            );  //for this react have to double render on change so, better to do this task in handleFormData on change all together.
-                // User types → state changes → effect runs → state changes again → render
+            );  //for this React have to double render on change so, better to do this task in handleFormData on change all together.
+                // User types → state changes → render → effect runs → state changes again → render //karon, jokhoni var er state change hoy, tokhoni UI re-render hoy React e.
     }
-            ,[formData.UnitPrice,formData.Qty]  //this is also a reason that you can just take prev or from formData.UnitPrice direct, both are newest data!
+            ,[formData.UnitPrice,formData.Qty]  //this is also a reason that you can just take prev or from formData.UnitPrice direct, both are the newest data!
     );
-    /** The above useEffect's prev is the newest cause its not taking from somewhere else and its taking only AFTER unitprice/Qty is CHANGED otherwise not so, only if new data enterd then do! its using whatever is saved in the state and calculating with it*/
+    /** The above useEffect's prev is the newest cause it's not taking from somewhere else and its taking only AFTER unitprice/Qty is CHANGED otherwise not so, only if new data entered then do! its using whatever is saved in the state and calculating with it*/
 
-    /** But the below func prev case: This is where new data enters into your system from Browser where user typed into your code- the react state! so e.target has the newest values!*/
-    const handleFormData = (e_newDataEvent)=>{  //this e is the syntehticEvent passed automatically from the html tag when called onChange
+    /** But the below func prev case: This is where new data enters into your system from Browser where user typed into your code- >>the React state! so e.target has the newest values!*/
+    const handleFormData = (e_newDataEvent)=>{  //this e is the syntheticEvent passed automatically from the HTML tag when called onChange()
         // this func doesn't need to return anything because, kono return data er proyojon nei, direct set kore ditesi value so. React doesn't use the return value from here!.
         // e as 'e_newDataEvent' is the new current data.
         // console.log(e_newDataEvent);
         /** e == 'e_newDataEvent'
-         * e is containing the new data "Email", and prev is everything else as of of the previous state!
+         * e is containing the new data "Email", and prev is everything else as of, of the previous state!
          * If you type in the Email field, e.target.name tells React: "Update the email part of the state".
             * prev is the snapshot of everything else currently in that state (like the Username and Password etc you already typed).
-         * then you make (prev) => ( {BRAND NEW OBJECT to be returned} )
-         * then you copy the everything else called prev datas by ...prev ope into the {}
+         * then you make (prev) => ( {BRAND-NEW-`OBJECT` to be returned...} )
+         * then you copy the "everything" else called 'prev' datas by ...prev ope into the {}
          * then you just change the value of the key that matches with any of the unique key name you set in the <input /> like name, id, value etc...
             * , [id]:value} //matched id with new value caught from "e"
          */
@@ -47,7 +47,7 @@ export default function CreateProduct(){
                     value={formData.ProductName}
                     onChange={handleFormData}
                 />
-        * and the e.target.value is always the value of the html tag I caught on to this function!
+        * and the e.target.value is always the value of the HTML tag (<input />) I caught here on this function!
         * */
         const {id, value} = e_newDataEvent.target;
         // setting the new data to my state variable and also copying the other things into new object{}:-
@@ -55,7 +55,7 @@ export default function CreateProduct(){
             (prevState) =>
                 (
                     {...prevState, [id]:value}
-                    /** better solution than useEffect(for Derived veriable TotalPrice)?! [below is the best practice]
+                    /** better solution than useEffect(for Derived variable TotalPrice)?! [below is the best practice] [cmnt above, uncmnt the below]
                      { const nextState = {...prevState, [id]:value}
                      // Update TotalPrice immediately in the same state update
                      nextState.TotalPrice = nextState.UnitPrice * nextState.Qty;

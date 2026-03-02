@@ -26,8 +26,8 @@ function BriefIntroduction() {
 }
 function TabularTechnologyInformation(){
     const technology_used = [
-        {sl:1, name: "React", description: "Frontend Tech"},
-        {sl:2, name: "axios", description: "An Ajax tech"},
+        {sl:1, name: "React", description: "Frontend Technology"},
+        {sl:2, name: "axios", description: "An Ajax Tech (for API calling)"},
         {sl:3, name: "milligram", description: "CSS mini framework"},
     ]
     const table_key_names = Object.keys(technology_used[0]);    //Object.keys(your_object[0]) to get the obj key names.
@@ -54,7 +54,7 @@ function TabularTechnologyInformation(){
             </tbody>
             <tfoot>
             <tr>
-                <td scope="col" colSpan={3}><strong>Other Features used:</strong> useLocation(), useNavigate(), useEffect(), etc from react-router-dom</td>
+                <td scope="col" colSpan={3}><strong>Other Features used:</strong> useLocation(), useNavigate(), useState(), useEffect(), etc from react-router-dom & react</td>
             </tr>
             </tfoot>
         </table>
@@ -82,9 +82,9 @@ export default function HomePage(){
     return(
         <div className={"container"}>
             <h1 style={{display: 'flex', flexDirection: 'column',
-                justifyContent: 'center', // Centers horizontally
-                alignItems: 'center'    // Centers Vertically
-            }}>Welcome To API Practice App</h1>
+                        justifyContent: 'center', // Centers horizontally
+                        alignItems: 'center'    // Centers Vertically
+            }}>Welcome To `API Practice App`</h1>
 
             <hr style={{ border: '1px solid black' }}/>
             <div>
