@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// importing Milligram css for this project:
+// importing Milligram CSS for this project:
 import 'milligram/dist/milligram.min.css';
 import {BrowserRouter} from "react-router-dom";
 
