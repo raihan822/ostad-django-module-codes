@@ -78,7 +78,7 @@ export const TAB2_NAME = 'Create Product'
 // main:
 function App() {
   // kept const cause, I am not gonna manually change the value. dynamically change hobe!
-  const location = useLocation(); //made an instance of the function, not nacessary but dont do useLoca().pathname inside return cause it may cause render issue. You can even do const {pathname} = useLocation();
+  const location = useLocation(); //made an instance of the function, not necessary but dont do useLoca().pathname inside return cause it may cause render issue. You can even do const {pathname} = useLocation();
   return (
       <div className={"container"}>
         <nav>

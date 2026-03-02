@@ -1,4 +1,4 @@
-// This Custom Component makes a Table out of a given Object Array [{},{},{}]. Nothing else is required!
+// This Custom Component makes a Table out of a given Object Array [{KEY:VALUE},{KEY:VALUE},{KEY:VALUE}]. Nothing else is required!
 import "./TableComponent.css"
 export default function TableComponent({
                                          caption="",
@@ -15,8 +15,8 @@ export default function TableComponent({
     const SL = KEY_NAMES[0];    //first key should be sent as serial number of the data
 
     /*  Note:-
-    usee this for CAPITILISED WORD:=>   text.toUpperCase()
-    use fort first Char Capped in JS:=>    text.charAt(0).toUpperCase() + text.slice(1)
+    usee this for CAPITALISED WORD:=>   text.toUpperCase()
+    use for first Char Capped in JS:=>    text.charAt(0).toUpperCase() + text.slice(1)
     * */
     return (
         <table>
