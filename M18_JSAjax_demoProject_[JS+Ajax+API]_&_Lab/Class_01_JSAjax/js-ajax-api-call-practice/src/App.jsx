@@ -41,6 +41,9 @@ But when you manually interact with a button click or something: “Do something
 /** what means mounting-unmounting in react app behavior:
  Instead of destroying the component and recreating it on the memory (unmounting and mounting), it simply re-renders the existing component with the new parameters.
  -- generally a component unmounts when you leave the page (resets form/inputs automatically as it unmounts).
+ -- but jokhon same page e theke URL e just id change kore reload doi tokhon same page again ashar karone ract ager data mone rakhbe, unmount korbe na.
+ thats why, useEffect use korle ei khetre on change of x,y etc var target kore dite hobe tahole same page holeo jokhon id change hobe tokhon same page e
+ react unmount kore data na muchleo id change howa te notun id er data useEffect diye retrieve kore niye ashbe
  */
 
 /*
@@ -79,11 +82,14 @@ export const TAB2_NAME = 'Create Product'
 function App() {
   // kept const cause, I am not gonna manually change the value. dynamically change hobe!
   const location = useLocation(); //made an instance of the function, not necessary but dont do useLoca().pathname inside return cause it may cause render issue. You can even do const {pathname} = useLocation();
+
+    //Link er to address and route-path er address has to match exactly
+    // Link to is used for user's own clicking action. but auto redirect korete chaile useNavigate korete hobe
   return (
       <div className={"container"}>
         <nav>
           { location.pathname === "/"? null: (
-              //react always renders a single component Returned from a condition or function So, <></>
+              //react always renders a single component Returned from a condition or function So, <></> and ekhane auto return hocche cause ternary operator
               <>
                   <Link to="/">Home</Link> | {" "}
               </>

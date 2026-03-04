@@ -16,6 +16,12 @@ then come to redirected page and do, useParams() to catch the navigate RouteKey
  If you use [], The useEffect runs only once (when the component first appears). If the user navigates from product 1 to product 2, the id changes, but your useEffect won't fire again, and the form will still show Product 1's data.
  If you use [id], You are telling React: "Hey, every time the id in the URL changes, please re-run my API fetch."
  */
+/*contradictory information: [JUST READ & match with above]
+/** what means mounting-unmounting in react app behavior:
+ Instead of destroying the component and recreating it on the memory (unmounting and mounting), it simply re-renders the existing component with the new parameters.
+ -- generally a component unmounts when you leave the page (resets form/inputs automatically as it unmounts).
+*
+* */
 
 import {useParams, useNavigate} from "react-router-dom";
 import {useState,useEffect} from "react";

@@ -94,7 +94,7 @@ src/
 │   ├── HomePage.jsx
 │   └── DashboardPage.jsx
 ├── utils/                // Global utility functions (e.g., formatDate)
-├── App.jsx               // Main application component
+├── App.jsx               // Main application component [All the Routes here]
 └── main.jsx              // Entry point (where ReactDOM.createRoot is called)
 ```
 
