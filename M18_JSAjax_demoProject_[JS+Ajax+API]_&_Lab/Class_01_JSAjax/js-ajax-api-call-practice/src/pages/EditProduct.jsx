@@ -89,7 +89,7 @@ export default function EditProduct(){
         }
         fetchData();
         return ()=> controller.abort();
-    }, []); //Run on mount
+    }, []); //Run Once on mount
 
     // (POST) Updating Product DATA:
     const handleFormData = (e)=>{

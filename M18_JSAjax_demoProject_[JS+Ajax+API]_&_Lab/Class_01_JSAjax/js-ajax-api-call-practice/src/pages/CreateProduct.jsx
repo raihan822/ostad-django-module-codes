@@ -70,7 +70,7 @@ export default function CreateProduct(){
         setIsSubmitting(true);
         // console.log("after submit formData:", formData);
         const PAYLOAD = formData
-        const CREATE_URL ='https://crud.teamrabbil.com/api/v1/CreateProduct';
+        const CREATE_URL ='https://crud.teamrabbil.com/api/v1/CreateProduct';   //URL of create
 
         try{
             const response = await axios.post(CREATE_URL, PAYLOAD);

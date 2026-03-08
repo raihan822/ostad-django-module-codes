@@ -1,6 +1,5 @@
-// Global utility functions (e.g., formatDate)
-
-// Helper Functions
+// Global utility functions (e.g., formatDate) || PURE JAVASCRIPT regular functions
+// Helper Functions (WARNING! you should make the file ext as js and treat it like a js utility solver functions file)
 /**
  * Checks if a string contains any of the specified keywords.
  * @param {string} str - The string to check (e.g., array[0]).

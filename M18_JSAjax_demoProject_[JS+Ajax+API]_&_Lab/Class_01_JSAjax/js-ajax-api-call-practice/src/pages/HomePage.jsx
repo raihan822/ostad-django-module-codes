@@ -11,7 +11,7 @@ import {TAB1_NAME, TAB2_NAME} from "../App.jsx";
 function BriefIntroduction() {
     return(
         <div>
-            <h2>Info:</h2>
+            <h2>Information:</h2>
             <p>
                 Here I have practiced API CRUD Operations with React and <strong><i>Rabbil bhai's</i></strong> Postman Practice Api
                 (<a href="https://documenter.getpostman.com/view/39406886/2sAY4vh3UX"
