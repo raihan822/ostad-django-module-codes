@@ -60,14 +60,15 @@ make `Project`+`App`[installed_apps<>]
     -> Make DB Class `Model(M)` 
         -> admin.py permission+ superuser creation 
             -> `Views(V)` controller func for webpages (app views.py)
-                -> URL config -> app `template(T)/` for page HTMLs, app `static/` & CSS 
+                -> URL config -> app `template(T)/` for page HTMLs, app `static/` for CSS files
 -> `Finish!`
 ```
 
 # Django Note:
 - app banaile sheta project er `settings.py` e `INSTALLED_APP` e add kore nite hoy to connect it to project
-- `views` e control thakbe.. kon `template` ta kon func call e show hobe.
-- `templete`/views er `func` nijei UI create korbe.
+- [in app] `views` e control function thakbe.. kon `template` ta kon func call e show hobe shei logic.
+- [in app] `templete/html` orthat, views er `func` nijei UI `render` korbe.
+- [in app] `static/css` dir te CSS file gulo thakbe ja html e load kore style.css boshate hobe.
 
 - views er func gula receive korbe `request` or r, and `return` korbe as a response `httpresponse`/ ba `render` a `templete` UI
 
