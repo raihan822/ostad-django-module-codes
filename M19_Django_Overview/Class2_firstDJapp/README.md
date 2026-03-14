@@ -12,20 +12,20 @@
 3. **Admin Configuration [For the Database Model]:** [Done]
    1. Register `Post` Model in admin
    2. Create **_Super User_**
-4. **Views Layer**
+4. **Views Layer** [Done]
    1. Create View for _**listing Post**_
-   2. Create View for **_Post details_**
-5. **URL Configuration**
+   2. Create View for _**Post details**_
+5. **URL Configuration** [Done]
    1. Setup Project `URLs`
    2. Create blog `URLs`
    3. Connect Views to `URLs`running
 
 - settings.py -> Database = [..] in here you can configure which SQL e
-6. **Templates Layer**
+6. **Templates Layer** [Done]
    1. Create Templates Directory
    2. Create Posts list Template
    3. Create Post details Template
-7. **Basic Styling**
+7. **Basic Styling** [Done]
    1. Setup static files
    2. Add basic CSS
 

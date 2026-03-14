@@ -140,7 +140,7 @@ export default function ProductList(){      //React component func, must be sync
             * */
             if (response.data.status === "success"){
                 setProducts(prevState => { //this prevState is an array type, (we declared in useState([]))
-                        //Curly braces disi so MUST RETURN likhtei hobee!!!!
+                        //Curly braces disi so MUST RETURN likhtei hobee!!!! if data return is necessary
                     return prevState.filter(item => item._id !== id); //filter accepts if True only
                     }
                 )

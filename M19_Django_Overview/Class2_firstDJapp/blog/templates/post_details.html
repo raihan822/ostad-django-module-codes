@@ -1,0 +1,18 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+    <h1 style="color: red;">Post Details</h1>
+    <div><strong>Post ID: </strong> {{post_id}}</div>
+    <div><strong>Post Title: </strong> {{post_title}}</div>
+    <div><strong>Post Content: </strong> {{post_details}}</div>
+</body>
+</html>
