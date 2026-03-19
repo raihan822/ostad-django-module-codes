@@ -101,6 +101,12 @@ export default function CreateProduct(){
         // return;
     };
 
+    /*
+    Watch out for:
+    in your snippet, make sure you aren't calling the function like onClick={handleAddToCart()} (with parentheses).
+    That executes the function every time the component renders.
+    Always use the reference onClick={handleAddToCart} or the arrow function onClick={() => handleAddToCart(id)}.
+    * */
     return (
         <div>
             <h1>Add New Product</h1>

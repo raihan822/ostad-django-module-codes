@@ -1,3 +1,11 @@
+# Vite+React quick setup:
+1. `npm create vite@latest react-app-name`
+2. **Install common npm pkg for React:** `npm install axios bootstrap react-bootstrap react-markdown react-router-dom`
+3. change browser tab icon and name from index.html
+4. copy the main.jsx from bangla-prescription-ai and replace in yours
+5. copy the app.jsx file and directories from src/: components/, hooks/, pages/: usedtechstack, testcomponent, utils/
+## Done!
+-----
 That's a great question\! Following a consistent set of naming and structural conventions is key to building maintainable and readable React applications.
 
 Here are some of the widely accepted best practices for naming conventions and file structure in a React project:

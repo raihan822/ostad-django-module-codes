@@ -1,8 +1,17 @@
+# Vite+React quick setup:
+1. `npm create vite@latest react-app-name`
+2. **Install common npm pkg for React:** `npm install axios bootstrap react-bootstrap react-markdown react-router-dom`
+3. change browser tab icon and name from index.html
+4. copy the main.jsx from bangla-prescription-ai and replace in yours
+5. copy the app.jsx file and directories from src/: components/, hooks/, pages/: usedtechstack, testcomponent, utils/
+## Done!
+-----
+
 Implementing api calls from class1
 
 
 # React note:
-Here are the **simplest and most common ways to set up a React project inside your own directory**, step by step. I’ll start with the **recommended modern approach**, then mention alternatives.
+**Set up a React project inside your own directory**, step by step. I’ll start with the **recommended modern approach**, then mention alternatives.
 
 ---
 
