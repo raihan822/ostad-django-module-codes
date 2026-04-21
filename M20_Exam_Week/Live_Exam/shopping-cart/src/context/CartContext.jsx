@@ -32,10 +32,9 @@ export function CartProvider({ children }) {
     }
 
     // ✅ UPDATE QUANTITY (clean version)
-    function updateQuantity(id, delta) {
+    function updateQuantity(id, delta) {    //delta means changes: -1, -1 etc
         setCartItems(prev =>
-            prev
-                .map(item =>
+            prev.map(item =>
                     item.id === id
                         ? { ...item, quantity: item.quantity + delta }
                         : item
@@ -74,7 +73,7 @@ export function CartProvider({ children }) {
         setCouponError("");
     }
 
-    // ✅ DERIVED VALUES (NO STATE!)
+    // ✅ DERIVED VALUES (NO STATE!) : Reason- absolute values gula useState e ache, jokhon absolute gula change hoy tokhon react e rerender hoy
     const subTotal = cartItems.reduce(
         (total, item) => total + item.price * item.quantity,
         0
