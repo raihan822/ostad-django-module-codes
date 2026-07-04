@@ -1,0 +1,2 @@
+Email is sent to a@b.mail.com
+Email is sent to ac@bd.mail.com
